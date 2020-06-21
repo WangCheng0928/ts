@@ -1,14 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 // import Hello from './components/demo/Hello'
 // import HelloClass from './components/demo/HelloClass'
 // import HelloHOC from './components/demo/HelloHOC'
-import HelloHooks from './components/demo/HelloHooks'
+// import HelloHooks from './components/demo/HelloHooks'
+
+import Root from './routers/index'
+import store from './redux/store'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <HelloHooks name="typescript" />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <Root />
+  </Provider>,
   document.getElementById('root')
 )
 
