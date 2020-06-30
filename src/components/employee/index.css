@@ -1,0 +1,7 @@
+.operations {
+  margin: 20px 5px;
+}
+
+.operations :nth-child(2) {
+  float: right;
+}

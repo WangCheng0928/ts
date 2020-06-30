@@ -1,3 +1,7 @@
+import React from 'react'
+import { Popconfirm, Button } from 'antd'
+import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
+
 const employeeColumns = [
   {
     title: '姓名',
@@ -18,6 +22,24 @@ const employeeColumns = [
     title: '职级',
     dataIndex: 'level',
     key: 'level',
+  },
+  {
+    title: '操作',
+    dataIndex: 'operations',
+    render: () => {
+      return (
+        <div>
+          <Button icon={<EditOutlined />} type="link">
+            编辑
+          </Button>
+          <Popconfirm title="确定删除吗？">
+            <Button type="primary" icon={<DeleteOutlined />}>
+              删除
+            </Button>
+          </Popconfirm>
+        </div>
+      )
+    },
   },
 ]
 export default employeeColumns

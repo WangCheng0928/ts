@@ -11,7 +11,14 @@ interface EmployeeInfo {
   name: string
   department: string
   hiredate: string
-  level: string
+  level: string | undefined
+}
+
+export interface EmployeeInfoForAdd {
+  name: string
+  departmentId: number | undefined
+  hiredate: string
+  levelId: number | undefined
 }
 
 export type EmployeeResponse = EmployeeInfo[] | undefined
